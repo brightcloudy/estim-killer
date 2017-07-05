@@ -58,21 +58,17 @@ F7 "I2C1_SCL" O R 1900 4150 60
 F8 "I2C1_SDA" B R 1900 4250 60 
 $EndSheet
 $Sheet
-S 4350 850  550  500 
+S 5350 850  550  500 
 U 595CBBCF
 F0 "headers" 60
 F1 "file595CBBCE.sch" 60
-F2 "SWDIO" B L 4350 950 60 
-F3 "SWCLK" O L 4350 1050 60 
+F2 "SWDIO" B L 5350 950 60 
+F3 "SWCLK" O L 5350 1050 60 
 $EndSheet
-Text Label 4250 950  2    60   Italic 0
+Text Label 5250 950  2    60   Italic 0
 STM32_SWDIO
-Text Label 4250 1050 2    60   Italic 0
+Text Label 5250 1050 2    60   Italic 0
 STM32_SWCLK
-Wire Wire Line
-	4250 1050 4350 1050
-Wire Wire Line
-	4250 950  4350 950 
 Text Label 2050 3050 0    60   Italic 0
 STM32_SWDIO
 Text Label 2050 3150 0    60   Italic 0
@@ -91,9 +87,9 @@ F0 "power" 60
 F1 "file595D007D.sch" 60
 F2 "3.3V" O R 3000 1500 60 
 F3 "9V" I L 2150 1500 60 
+F4 "14V" O R 3000 1650 60 
+F5 "14V_SHDNn" I R 3000 2050 60 
 $EndSheet
-Wire Wire Line
-	1400 1500 2150 1500
 $Comp
 L +9V #PWR01
 U 1 1 595D15BF
@@ -105,9 +101,6 @@ F 3 "" H 2000 1350 50  0001 C CNN
 	1    2000 1350
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2000 1350 2000 1500
-Connection ~ 2000 1500
 $Comp
 L +3.3V #PWR02
 U 1 1 595D18DD
@@ -130,13 +123,6 @@ F 3 "" H 3400 1300 50  0001 C CNN
 	1    3400 1300
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	3000 1500 3400 1500
-Wire Wire Line
-	3400 1500 3400 1300
-Wire Wire Line
-	3200 1350 3200 1500
-Connection ~ 3200 1500
 $Sheet
 S 4000 3250 850  400 
 U 595D27EA
@@ -148,18 +134,12 @@ F4 "SDIN" I L 4000 3550 60
 F5 "SYNCn" I L 4000 3350 60 
 F6 "SCLK" I L 4000 3450 60 
 $EndSheet
-Wire Wire Line
-	1900 3350 4000 3350
 Text Label 2050 3350 0    60   Italic 0
 SPI_DAC_NSS
-Wire Wire Line
-	1900 3450 4000 3450
 Text Label 2050 3450 0    60   Italic 0
 SPI_DAC_SCLK
 Text Label 2050 3550 0    60   Italic 0
 SPI_DAC_MOSI
-Wire Wire Line
-	1900 3550 4000 3550
 $Comp
 L TEST TP?
 U 1 1 595D5014
@@ -193,19 +173,6 @@ F 3 "" H 3750 3200 50  0001 C CNN
 	1    3750 3200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2950 3200 2950 3350
-Connection ~ 2950 3350
-Wire Wire Line
-	3350 3200 3350 3450
-Connection ~ 3350 3450
-Wire Wire Line
-	3750 3200 3750 3550
-Connection ~ 3750 3550
-Wire Wire Line
-	1900 3050 2050 3050
-Wire Wire Line
-	2050 3150 1900 3150
 Text Label 4950 3350 0    60   Italic 0
 DAC_VOUTA
 Text Label 4950 3550 0    60   Italic 0
@@ -232,14 +199,6 @@ F 3 "" H 6050 3200 50  0001 C CNN
 	1    6050 3200
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	4850 3350 5600 3350
-Wire Wire Line
-	5600 3350 5600 3200
-Wire Wire Line
-	4850 3550 6050 3550
-Wire Wire Line
-	6050 3550 6050 3200
 $Sheet
 S 4000 4050 800  550 
 U 595D851E
@@ -252,10 +211,6 @@ F5 "OUTA" O R 4800 4200 60
 F6 "INA" I L 4000 4400 60 
 F7 "INB" I L 4000 4500 60 
 $EndSheet
-Wire Wire Line
-	1900 4150 4000 4150
-Wire Wire Line
-	1900 4250 4000 4250
 Text Label 2050 4150 0    60   Italic 0
 I2C_POT_SCL
 Text Label 2050 4250 0    60   Italic 0
@@ -282,20 +237,10 @@ F 3 "" H 3350 4000 50  0001 C CNN
 	1    3350 4000
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	2950 4000 2950 4150
-Connection ~ 2950 4150
-Wire Wire Line
-	3350 4000 3350 4250
-Connection ~ 3350 4250
 Text Label 3800 4400 2    60   Italic 0
 DAC_VOUTA
-Wire Wire Line
-	3800 4400 4000 4400
 Text Label 3800 4500 2    60   Italic 0
 DAC_VOUTA
-Wire Wire Line
-	3800 4500 4000 4500
 Text Label 4950 4200 0    60   Italic 0
 POT_OUTA
 Text Label 4950 4450 0    60   Italic 0
@@ -322,6 +267,85 @@ F 3 "" H 6000 4050 50  0001 C CNN
 	1    6000 4050
 	1    0    0    -1  
 $EndComp
+$Comp
+L TEST TP?
+U 1 1 595CFC49
+P 3750 1300
+F 0 "TP?" H 3750 1600 50  0000 C BNN
+F 1 "14V" H 3750 1550 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 3750 1300 50  0001 C CNN
+F 3 "" H 3750 1300 50  0001 C CNN
+	1    3750 1300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +14V #PWR?
+U 1 1 595D02BE
+P 3550 1350
+F 0 "#PWR?" H 3550 1200 50  0001 C CNN
+F 1 "+14V" H 3550 1490 50  0000 C CNN
+F 2 "" H 3550 1350 50  0001 C CNN
+F 3 "" H 3550 1350 50  0001 C CNN
+	1    3550 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5250 1050 5350 1050
+Wire Wire Line
+	5250 950  5350 950 
+Wire Wire Line
+	1400 1500 2150 1500
+Wire Wire Line
+	2000 1350 2000 1500
+Connection ~ 2000 1500
+Wire Wire Line
+	3000 1500 3400 1500
+Wire Wire Line
+	3400 1500 3400 1300
+Wire Wire Line
+	3200 1350 3200 1500
+Connection ~ 3200 1500
+Wire Wire Line
+	1900 3350 4000 3350
+Wire Wire Line
+	1900 3450 4000 3450
+Wire Wire Line
+	1900 3550 4000 3550
+Wire Wire Line
+	2950 3200 2950 3350
+Connection ~ 2950 3350
+Wire Wire Line
+	3350 3200 3350 3450
+Connection ~ 3350 3450
+Wire Wire Line
+	3750 3200 3750 3550
+Connection ~ 3750 3550
+Wire Wire Line
+	1900 3050 2050 3050
+Wire Wire Line
+	2050 3150 1900 3150
+Wire Wire Line
+	4850 3350 5600 3350
+Wire Wire Line
+	5600 3350 5600 3200
+Wire Wire Line
+	4850 3550 6050 3550
+Wire Wire Line
+	6050 3550 6050 3200
+Wire Wire Line
+	1900 4150 4000 4150
+Wire Wire Line
+	1900 4250 4000 4250
+Wire Wire Line
+	2950 4000 2950 4150
+Connection ~ 2950 4150
+Wire Wire Line
+	3350 4000 3350 4250
+Connection ~ 3350 4250
+Wire Wire Line
+	3800 4400 4000 4400
+Wire Wire Line
+	3800 4500 4000 4500
 Wire Wire Line
 	4800 4200 5600 4200
 Wire Wire Line
@@ -330,4 +354,11 @@ Wire Wire Line
 	4800 4450 6000 4450
 Wire Wire Line
 	6000 4450 6000 4050
+Wire Wire Line
+	3000 1650 3750 1650
+Wire Wire Line
+	3750 1650 3750 1300
+Wire Wire Line
+	3550 1350 3550 1650
+Connection ~ 3550 1650
 $EndSCHEMATC
