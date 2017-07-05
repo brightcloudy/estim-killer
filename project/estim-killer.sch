@@ -34,7 +34,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 6
+Sheet 1 7
 Title ""
 Date ""
 Rev ""
@@ -45,7 +45,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Sheet
-S 1250 2900 650  1000
+S 1250 2900 650  1550
 U 595C86AA
 F0 "stm32micro" 60
 F1 "file595C86A9.sch" 60
@@ -54,6 +54,8 @@ F3 "SWCLK" I R 1900 3150 60
 F4 "SPI1_NSS" O R 1900 3350 60 
 F5 "SPI1_SCK" O R 1900 3450 60 
 F6 "SPI1_MOSI" O R 1900 3550 60 
+F7 "I2C1_SCL" O R 1900 4150 60 
+F8 "I2C1_SDA" B R 1900 4250 60 
 $EndSheet
 $Sheet
 S 4350 850  550  500 
@@ -204,4 +206,128 @@ Wire Wire Line
 	1900 3050 2050 3050
 Wire Wire Line
 	2050 3150 1900 3150
+Text Label 4950 3350 0    60   Italic 0
+DAC_VOUTA
+Text Label 4950 3550 0    60   Italic 0
+DAC_VOUTB
+$Comp
+L TEST TP?
+U 1 1 595D7FBD
+P 5600 3200
+F 0 "TP?" H 5600 3500 50  0000 C BNN
+F 1 "DAC_VOUTA" H 5600 3450 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 5600 3200 50  0001 C CNN
+F 3 "" H 5600 3200 50  0001 C CNN
+	1    5600 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST TP?
+U 1 1 595D8168
+P 6050 3200
+F 0 "TP?" H 6050 3500 50  0000 C BNN
+F 1 "DAC_VOUTB" H 6050 3450 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 6050 3200 50  0001 C CNN
+F 3 "" H 6050 3200 50  0001 C CNN
+	1    6050 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 3350 5600 3350
+Wire Wire Line
+	5600 3350 5600 3200
+Wire Wire Line
+	4850 3550 6050 3550
+Wire Wire Line
+	6050 3550 6050 3200
+$Sheet
+S 4000 4050 800  550 
+U 595D851E
+F0 "digipot" 60
+F1 "file595D851D.sch" 60
+F2 "SCL" I L 4000 4150 60 
+F3 "SDA" B L 4000 4250 60 
+F4 "OUTB" O R 4800 4450 60 
+F5 "OUTA" O R 4800 4200 60 
+F6 "INA" I L 4000 4400 60 
+F7 "INB" I L 4000 4500 60 
+$EndSheet
+Wire Wire Line
+	1900 4150 4000 4150
+Wire Wire Line
+	1900 4250 4000 4250
+Text Label 2050 4150 0    60   Italic 0
+I2C_POT_SCL
+Text Label 2050 4250 0    60   Italic 0
+I2C_POT_SDA
+$Comp
+L TEST TP?
+U 1 1 595DAB2D
+P 2950 4000
+F 0 "TP?" H 2950 4300 50  0000 C BNN
+F 1 "POT_SCL" H 2950 4250 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 2950 4000 50  0001 C CNN
+F 3 "" H 2950 4000 50  0001 C CNN
+	1    2950 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST TP?
+U 1 1 595DAC9B
+P 3350 4000
+F 0 "TP?" H 3350 4300 50  0000 C BNN
+F 1 "POT_SDA" H 3350 4250 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 3350 4000 50  0001 C CNN
+F 3 "" H 3350 4000 50  0001 C CNN
+	1    3350 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2950 4000 2950 4150
+Connection ~ 2950 4150
+Wire Wire Line
+	3350 4000 3350 4250
+Connection ~ 3350 4250
+Text Label 3800 4400 2    60   Italic 0
+DAC_VOUTA
+Wire Wire Line
+	3800 4400 4000 4400
+Text Label 3800 4500 2    60   Italic 0
+DAC_VOUTA
+Wire Wire Line
+	3800 4500 4000 4500
+Text Label 4950 4200 0    60   Italic 0
+POT_OUTA
+Text Label 4950 4450 0    60   Italic 0
+POT_OUTB
+$Comp
+L TEST TP?
+U 1 1 595DBFA6
+P 5600 4050
+F 0 "TP?" H 5600 4350 50  0000 C BNN
+F 1 "POT_OUTA" H 5600 4300 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 5600 4050 50  0001 C CNN
+F 3 "" H 5600 4050 50  0001 C CNN
+	1    5600 4050
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST TP?
+U 1 1 595DC272
+P 6000 4050
+F 0 "TP?" H 6000 4350 50  0000 C BNN
+F 1 "POT_OUTB" H 6000 4300 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Round-SMD-Pad_Small" H 6000 4050 50  0001 C CNN
+F 3 "" H 6000 4050 50  0001 C CNN
+	1    6000 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 4200 5600 4200
+Wire Wire Line
+	5600 4200 5600 4050
+Wire Wire Line
+	4800 4450 6000 4450
+Wire Wire Line
+	6000 4450 6000 4050
 $EndSCHEMATC
