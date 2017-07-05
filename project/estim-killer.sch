@@ -34,7 +34,7 @@ EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
-Sheet 1 7
+Sheet 1 8
 Title ""
 Date ""
 Rev ""
@@ -294,23 +294,33 @@ Wire Wire Line
 Wire Wire Line
 	5250 950  5350 950 
 Wire Wire Line
-	1400 1500 2150 1500
+	1400 1500 2000 1500
+Wire Wire Line
+	2000 1500 2150 1500
 Wire Wire Line
 	2000 1350 2000 1500
 Connection ~ 2000 1500
 Wire Wire Line
-	3000 1500 3400 1500
+	3000 1500 3200 1500
+Wire Wire Line
+	3200 1500 3400 1500
 Wire Wire Line
 	3400 1500 3400 1300
 Wire Wire Line
 	3200 1350 3200 1500
 Connection ~ 3200 1500
 Wire Wire Line
-	1900 3350 4000 3350
+	1900 3350 2950 3350
 Wire Wire Line
-	1900 3450 4000 3450
+	2950 3350 4000 3350
 Wire Wire Line
-	1900 3550 4000 3550
+	1900 3450 3350 3450
+Wire Wire Line
+	3350 3450 4000 3450
+Wire Wire Line
+	1900 3550 3750 3550
+Wire Wire Line
+	3750 3550 4000 3550
 Wire Wire Line
 	2950 3200 2950 3350
 Connection ~ 2950 3350
@@ -333,9 +343,13 @@ Wire Wire Line
 Wire Wire Line
 	6050 3550 6050 3200
 Wire Wire Line
-	1900 4150 4000 4150
+	1900 4150 2950 4150
 Wire Wire Line
-	1900 4250 4000 4250
+	2950 4150 4000 4150
+Wire Wire Line
+	1900 4250 3350 4250
+Wire Wire Line
+	3350 4250 4000 4250
 Wire Wire Line
 	2950 4000 2950 4150
 Connection ~ 2950 4150
@@ -355,10 +369,31 @@ Wire Wire Line
 Wire Wire Line
 	6000 4450 6000 4050
 Wire Wire Line
-	3000 1650 3750 1650
+	3000 1650 3550 1650
+Wire Wire Line
+	3550 1650 3750 1650
 Wire Wire Line
 	3750 1650 3750 1300
 Wire Wire Line
 	3550 1350 3550 1650
 Connection ~ 3550 1650
+$Sheet
+S 4000 5150 800  500 
+U 595D13DE
+F0 "outputamp" 60
+F1 "file595D13DD.sch" 60
+F2 "SHDNn" I L 4000 5250 60 
+F3 "INA" I L 4000 5400 60 
+F4 "INB" I L 4000 5550 60 
+F5 "OUTA" O R 4800 5250 60 
+F6 "OUTB" O R 4800 5550 60 
+$EndSheet
+Text Label 3250 2050 0    60   Italic 0
+BOOST_SHDNn
+Wire Wire Line
+	3250 2050 3000 2050
+Text Label 3850 5250 2    60   Italic 0
+AMP_SHDNn
+Wire Wire Line
+	3850 5250 4000 5250
 $EndSCHEMATC

@@ -30,3 +30,6 @@ Some discussion of what functionality the device should have and of selection of
 - [LMR62014](http://www.ti.com/product/lmr62014)
   - [Datasheet](http://www.ti.com/lit/ds/symlink/lmr62014.pdf)
   - [SNVA500B](http://www.ti.com/lit/ug/snva500b/snva500b.pdf): AN-2183 LMR62014/LMR64010 Demo Board (Rev. B)
+### Output Amplifier
+- [LM4952](http://www.ti.com/product/lm4952)
+  - [Datasheet](http://www.ti.com/lit/ds/symlink/lm4952.pdf)

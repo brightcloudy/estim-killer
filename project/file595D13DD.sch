@@ -1,0 +1,345 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:estim-killer
+LIBS:estim-killer-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 8 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LM4952 U?
+U 1 1 595D14A9
+P 5800 3850
+F 0 "U?" H 5800 3750 50  0000 C CNN
+F 1 "LM4952" H 5800 3950 50  0000 C CNN
+F 2 "MODULE" H 5800 3850 50  0001 C CNN
+F 3 "DOCUMENTATION" H 5800 3850 50  0001 C CNN
+	1    5800 3850
+	1    0    0    -1  
+$EndComp
+$Comp
+L +14V #PWR?
+U 1 1 595D1522
+P 5800 3100
+F 0 "#PWR?" H 5800 2950 50  0001 C CNN
+F 1 "+14V" H 5800 3240 50  0000 C CNN
+F 2 "" H 5800 3100 50  0001 C CNN
+F 3 "" H 5800 3100 50  0001 C CNN
+	1    5800 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 3100 5800 3200
+Text Label 4850 3800 2    60   Italic 0
+AMP_VINA
+Wire Wire Line
+	4850 3800 5000 3800
+Text Label 4850 3900 2    60   Italic 0
+AMP_SHDNn
+Wire Wire Line
+	4850 3900 5000 3900
+Text Label 4850 4000 2    60   Italic 0
+AMP_VINB
+Wire Wire Line
+	4850 4000 5000 4000
+Text Label 4850 3700 2    60   Italic 0
+AMP_DCVOL
+Wire Wire Line
+	4850 3700 5000 3700
+$Comp
+L CP_Small C?
+U 1 1 595D160D
+P 6400 3050
+F 0 "C?" H 6410 3120 50  0000 L CNN
+F 1 "10u" H 6410 2970 50  0000 L CNN
+F 2 "Capacitors_Tantalum_SMD:CP_Tantalum_Case-A_EIA-3216-18_Reflow" H 6400 3050 50  0001 C CNN
+F 3 "" H 6400 3050 50  0001 C CNN
+	1    6400 3050
+	1    0    0    -1  
+$EndComp
+Text Notes 6550 3050 0    60   Italic 0
+20V tantalum
+$Comp
+L +14V #PWR?
+U 1 1 595D1671
+P 6250 2950
+F 0 "#PWR?" H 6250 2800 50  0001 C CNN
+F 1 "+14V" H 6250 3090 50  0000 C CNN
+F 2 "" H 6250 2950 50  0001 C CNN
+F 3 "" H 6250 2950 50  0001 C CNN
+	1    6250 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 595D1684
+P 6250 3150
+F 0 "#PWR?" H 6250 2900 50  0001 C CNN
+F 1 "GND" H 6250 3000 50  0000 C CNN
+F 2 "" H 6250 3150 50  0001 C CNN
+F 3 "" H 6250 3150 50  0001 C CNN
+	1    6250 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3150 6400 3150
+Wire Wire Line
+	6250 2950 6400 2950
+$Comp
+L GND #PWR?
+U 1 1 595D16B9
+P 5800 4550
+F 0 "#PWR?" H 5800 4300 50  0001 C CNN
+F 1 "GND" H 5800 4400 50  0000 C CNN
+F 2 "" H 5800 4550 50  0001 C CNN
+F 3 "" H 5800 4550 50  0001 C CNN
+	1    5800 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4550 5800 4500
+Text Label 6750 3800 0    60   Italic 0
+AMP_BYPASS
+Text Label 6750 3900 0    60   Italic 0
+AMP_VOUTB
+Text Label 6750 4000 0    60   Italic 0
+AMP_VOUTA
+Wire Wire Line
+	6750 4000 6600 4000
+Wire Wire Line
+	6600 3900 6750 3900
+Wire Wire Line
+	6750 3800 6600 3800
+Text Label 3900 2850 2    60   Italic 0
+AMP_DCVOL
+$Comp
+L R_Small R?
+U 1 1 595D18A4
+P 4100 3000
+F 0 "R?" H 4130 3020 50  0000 L CNN
+F 1 "10k" H 4130 2960 50  0000 L CNN
+F 2 "Resistors_SMD:R_0402" H 4100 3000 50  0001 C CNN
+F 3 "" H 4100 3000 50  0001 C CNN
+	1    4100 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_Small R?
+U 1 1 595D192B
+P 4100 2700
+F 0 "R?" H 4130 2720 50  0000 L CNN
+F 1 "10k" H 4130 2660 50  0000 L CNN
+F 2 "Resistors_SMD:R_0402" H 4100 2700 50  0001 C CNN
+F 3 "" H 4100 2700 50  0001 C CNN
+	1    4100 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 2800 4100 2900
+Wire Wire Line
+	3900 2850 4100 2850
+Connection ~ 4100 2850
+$Comp
+L +14V #PWR?
+U 1 1 595D1995
+P 4100 2550
+F 0 "#PWR?" H 4100 2400 50  0001 C CNN
+F 1 "+14V" H 4100 2690 50  0000 C CNN
+F 2 "" H 4100 2550 50  0001 C CNN
+F 3 "" H 4100 2550 50  0001 C CNN
+	1    4100 2550
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 595D19AE
+P 4100 3150
+F 0 "#PWR?" H 4100 2900 50  0001 C CNN
+F 1 "GND" H 4100 3000 50  0000 C CNN
+F 2 "" H 4100 3150 50  0001 C CNN
+F 3 "" H 4100 3150 50  0001 C CNN
+	1    4100 3150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4100 3150 4100 3100
+Wire Wire Line
+	4100 2550 4100 2600
+Text Notes 3250 2700 0    60   Italic 0
+divider to max\nvol control gain
+Text Label 4850 2850 2    60   Italic 0
+AMP_SHDNn
+$Comp
+L R_Small R?
+U 1 1 595D1A70
+P 5050 2950
+F 0 "R?" H 5080 2970 50  0000 L CNN
+F 1 "10k" H 5080 2910 50  0000 L CNN
+F 2 "Resistors_SMD:R_0402" H 5050 2950 50  0001 C CNN
+F 3 "" H 5050 2950 50  0001 C CNN
+	1    5050 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 595D1AAD
+P 5050 3100
+F 0 "#PWR?" H 5050 2850 50  0001 C CNN
+F 1 "GND" H 5050 2950 50  0000 C CNN
+F 2 "" H 5050 3100 50  0001 C CNN
+F 3 "" H 5050 3100 50  0001 C CNN
+	1    5050 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 3050 5050 3100
+Wire Wire Line
+	4850 2850 5250 2850
+Text HLabel 5250 2850 2    60   Input Italic 0
+SHDNn
+Connection ~ 5050 2850
+Text Label 4050 4300 2    60   Italic 0
+AMP_BYPASS
+$Comp
+L C_Small C?
+U 1 1 595D1B79
+P 4250 4400
+F 0 "C?" H 4260 4470 50  0000 L CNN
+F 1 "4.7u" H 4260 4320 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4250 4400 50  0001 C CNN
+F 3 "" H 4250 4400 50  0001 C CNN
+	1    4250 4400
+	1    0    0    -1  
+$EndComp
+Text Notes 4350 4400 0    60   Italic 0
+16V X5R
+$Comp
+L GND #PWR?
+U 1 1 595D1BDF
+P 4250 4550
+F 0 "#PWR?" H 4250 4300 50  0001 C CNN
+F 1 "GND" H 4250 4400 50  0000 C CNN
+F 2 "" H 4250 4550 50  0001 C CNN
+F 3 "" H 4250 4550 50  0001 C CNN
+	1    4250 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 4550 4250 4500
+Wire Wire Line
+	4050 4300 4250 4300
+Text Label 4950 5050 0    60   Italic 0
+AMP_VINA
+Text HLabel 4300 5050 0    60   Input Italic 0
+INA
+$Comp
+L C_Small C?
+U 1 1 595D1E2B
+P 4600 5050
+F 0 "C?" H 4610 5120 50  0000 L CNN
+F 1 "100n" H 4610 4970 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 4600 5050 50  0001 C CNN
+F 3 "" H 4600 5050 50  0001 C CNN
+	1    4600 5050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4300 5050 4500 5050
+Wire Wire Line
+	4700 5050 4950 5050
+Text HLabel 4300 5400 0    60   Input Italic 0
+INB
+Text Label 4950 5400 0    60   Italic 0
+AMP_VINB
+$Comp
+L C_Small C?
+U 1 1 595D1F37
+P 4600 5400
+F 0 "C?" H 4610 5470 50  0000 L CNN
+F 1 "100n" H 4610 5320 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 4600 5400 50  0001 C CNN
+F 3 "" H 4600 5400 50  0001 C CNN
+	1    4600 5400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4300 5400 4500 5400
+Wire Wire Line
+	4700 5400 4950 5400
+Text Label 6050 5050 2    60   Italic 0
+AMP_VOUTA
+$Comp
+L CP C?
+U 1 1 595D2140
+P 6400 5050
+F 0 "C?" H 6425 5150 50  0000 L CNN
+F 1 "330u" H 6425 4950 50  0000 L CNN
+F 2 "" H 6438 4900 50  0001 C CNN
+F 3 "" H 6400 5050 50  0001 C CNN
+	1    6400 5050
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6050 5050 6250 5050
+Text HLabel 6800 5050 2    60   Output Italic 0
+OUTA
+Wire Wire Line
+	6550 5050 6800 5050
+Text Label 6050 5400 2    60   Italic 0
+AMP_VOUTB
+$Comp
+L CP C?
+U 1 1 595D2217
+P 6400 5400
+F 0 "C?" H 6425 5500 50  0000 L CNN
+F 1 "330u" H 6425 5300 50  0000 L CNN
+F 2 "" H 6438 5250 50  0001 C CNN
+F 3 "" H 6400 5400 50  0001 C CNN
+	1    6400 5400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6050 5400 6250 5400
+Text HLabel 6800 5400 2    60   Output Italic 0
+OUTB
+Wire Wire Line
+	6800 5400 6550 5400
+$EndSCHEMATC
